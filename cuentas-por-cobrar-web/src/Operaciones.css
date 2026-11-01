@@ -1,0 +1,100 @@
+.operaciones {
+  display: grid;
+  gap: 24px;
+}
+
+.campos-factura {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 18px;
+}
+
+.operaciones label {
+  margin-top: 12px;
+}
+
+.operaciones input,
+.operaciones select {
+  margin-top: 8px;
+}
+
+.operaciones select {
+  width: 100%;
+  font: inherit;
+  color: #18332d;
+  background: #fcfdfb;
+  border: 1px solid #ccd7cf;
+  border-radius: 10px;
+  padding: 13px 14px;
+}
+
+.operaciones select:focus {
+  outline: 3px solid #d8ebc7;
+  border-color: #387859;
+}
+
+.linea-detalle {
+  display: grid;
+  grid-template-columns: minmax(180px, 3fr) 1fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+}
+
+.linea-detalle label {
+  min-width: 0;
+}
+
+.quitar-detalle {
+  margin: 0 0 8px;
+  width: auto;
+}
+
+.boton-corto {
+  width: auto;
+}
+
+.pie-operacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid #e1e8df;
+}
+
+.pie-operacion span {
+  font-size: 13px;
+  color: #64736d;
+}
+
+.pie-operacion strong {
+  display: block;
+  font-size: 30px;
+  margin-top: 8px;
+}
+
+.pie-operacion button {
+  margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+  .campos-factura {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .linea-detalle {
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #e1e8df;
+    padding-bottom: 16px;
+  }
+
+  .linea-detalle label:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .pie-operacion {
+    flex-wrap: wrap;
+  }
+}

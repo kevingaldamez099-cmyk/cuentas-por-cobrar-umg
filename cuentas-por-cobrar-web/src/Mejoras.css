@@ -1,0 +1,110 @@
+/* Ajustes visuales compartidos; las reglas de impresión permanecen independientes. */
+/* Blanco predominante con acentos azul petróleo y celeste. */
+:root { color: #203743; }
+.boton-peligro { background: #fff0ee; color: #a4312f; border: 1px solid #f0cfca; }
+.boton-peligro:hover { background: #ffe0dc; color: #862522; }
+@media screen {
+  body, .zona-formulario { background: #f5f8fb; }
+  .presentacion { background: linear-gradient(145deg, #173b4b, #245c70); }
+  .presentacion .etiqueta { color: #bde4f3; }
+  .presentacion .descripcion, .presentacion .pie { color: #d3e6ed; }
+  .caracteristicas span { border-color: #7098a7; }
+  .logo { background: #cee9f4; color: #20495c; }
+  .verde { color: #25637e; }
+  button { background: #28677f; }
+  button:hover { background: #1d5066; }
+  input, .filtro-clientes, .operaciones select { color: #203743; background: #fff; border-color: #cedbe3; }
+  input:focus, select:focus-visible, textarea:focus-visible { outline-color: #d8eaf5; border-color: #407b98; }
+  button:focus-visible { outline-color: #82b7d0; }
+  .boton-secundario { background: white; color: #285e78; border-color: #ccdce5; }
+  .boton-secundario:hover { background: #edf5fa; }
+  .boton-tabla { background: #edf5fa; color: #285e78; }
+  .boton-tabla:hover { background: #dcecf5; }
+  .boton-tabla.boton-peligro { background: #fff0ee; color: #a4312f; }
+  .boton-tabla.boton-peligro:hover { background: #ffe0dc; }
+  .insignia { background: #e6f1f8; color: #285e78; }
+}
+@media screen {
+  button { transition: background-color .16s ease, box-shadow .16s ease; }
+  button:disabled { cursor: not-allowed; }
+  input, select, textarea { font: inherit; }
+  select:focus-visible, textarea:focus-visible { outline: 3px solid #d8ebc7; border-color: #387859; }
+  .lateral {
+    position: sticky; top: 0; height: 100dvh; overflow-y: auto;
+    background: linear-gradient(165deg, #173b4b, #24556a);
+    padding: 28px 18px;
+  }
+  .lateral .marca { padding: 0 4px; }
+  .logo { flex-shrink: 0; }
+  .menu-titulo { margin-top: 32px; padding-left: 12px; }
+  .lateral nav button { display: flex; align-items: center; gap: 12px; padding: 13px 12px; font-size: 14px; }
+  .icono-menu { width: 20px; height: 20px; flex-shrink: 0; }
+  .lateral nav button:hover { background: #2e6175; }
+  .lateral nav .nav-activo, .lateral nav .nav-activo:hover { background: #d5eaf5; color: #20495c; box-shadow: 0 4px 14px #00000012; }
+  .menu-titulo, .usuario-panel small { color: #c4dfe9; }
+  .usuario-panel { padding: 24px 8px 0; }
+  .usuario-panel button { margin-top: 16px; border: 1px solid #ffffff25; }
+  .contenido { padding: 32px; }
+  .encabezado { padding-bottom: 22px; border-bottom: 1px solid #dfe7e1; margin-bottom: 26px; }
+  .encabezado h1 { font-size: 32px; }
+  .encabezado .etiqueta { font-size: 10px; }
+  .encabezado .texto-suave { font-size: 14px; }
+  .encabezado button { font-size: 13px; }
+  .bloque, .indicador { box-shadow: 0 4px 20px #173b2d04; }
+  .indicador { border-top: 3px solid #bad5e5; padding: 22px; }
+  .indicador.destacado { background: linear-gradient(135deg, #e1eff8, #f1f7fc); border-color: #d4e5ef; border-top-color: #5288a8; }
+  .totales-reporte .saldo-reporte { background: #e1eff8; }
+  .datos-cliente-reporte { background: #f0f6fa; }
+  .indicador strong, .totales-reporte strong, td { font-variant-numeric: tabular-nums; }
+  .indicador small { line-height: 1.5; }
+  .tabla-contenedor { border: 1px solid #e5ebe5; border-radius: 12px; }
+  th { background: #f0f5f9; padding-top: 14px; padding-bottom: 14px; white-space: nowrap; }
+  td { line-height: 1.5; }
+  tbody tr:hover { background: #f5f9fc; }
+  tbody tr:last-child td { border-bottom: 0; }
+  td[colspan] { text-align: center; padding: 32px 16px; color: #64736d; }
+  .estado { font-weight: 600; white-space: nowrap; }
+  .estado.pagada { background: #e1f3e9; color: #206445; }
+  .estado.pendiente { background: #fff2d8; color: #86580e; }
+  .boton-tabla { font-size: 12px; }
+  .nota-resumen { font-size: 13px; max-width: 850px; }
+  .accesos-rapidos {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 16px; padding: 18px 22px; margin-bottom: 22px;
+    background: #fff; border: 1px solid #e1e8df; border-radius: 16px;
+  }
+  .accesos-rapidos strong { display: block; font-size: 16px; }
+  .accesos-rapidos span { display: block; font-size: 12px; color: #64736d; margin-top: 5px; }
+  .acciones-rapidas { display: flex; flex-wrap: wrap; gap: 8px; }
+  .acciones-rapidas button { display: flex; align-items: center; gap: 8px; width: auto; margin: 0; padding: 11px 14px; font-size: 12px; }
+  .acciones-rapidas button:first-child { background: #edf5fa; color: #285e78; }
+  .acciones-rapidas button:first-child:hover { background: #dcecf5; }
+  .acciones-rapidas .icono-menu { width: 17px; height: 17px; }
+  .linea-detalle { background: #f7fafd; border: 1px solid #e0e9ef; border-radius: 12px; padding: 8px 14px 14px; margin-top: 12px; }
+  .pie-operacion { background: #f0f6fa; padding: 20px; border: 1px solid #e0e9ef; border-radius: 12px; }
+  .error { line-height: 1.5; }
+}
+
+@media screen and (max-width: 800px) {
+  .lateral { position: static; height: auto; overflow: visible; padding: 18px; }
+  .lateral .marca { font-size: 16px; }
+  .menu-titulo { margin-top: 20px; }
+  .lateral nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .lateral nav button { margin: 0; font-size: 12px; padding: 12px 8px; gap: 6px; }
+  .usuario-panel { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; padding-top: 16px; }
+  .usuario-panel small, .usuario-panel strong, .usuario-panel button { margin: 0; }
+  .usuario-panel button { width: auto; font-size: 12px; padding: 9px 12px; margin-left: auto; }
+  .contenido { padding: 22px 16px; }
+  .encabezado { gap: 12px; }
+  .encabezado h1 { font-size: 28px; }
+  .encabezado button { margin-top: 0; }
+  .accesos-rapidos { padding: 18px; }
+  .bloque { padding: 20px; }
+}
+
+@media screen and (max-width: 440px) {
+  .lateral nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .indicadores { grid-template-columns: 1fr; }
+  .acciones-rapidas { width: 100%; }
+  .acciones-rapidas button { width: 100%; }
+}

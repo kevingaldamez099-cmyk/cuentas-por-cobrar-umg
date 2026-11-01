@@ -1,0 +1,31 @@
+# Compilación y dependencias
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+CuentasPorCobrar.Api/wwwroot/
+
+# Archivos locales, credenciales y bases de datos
+.vs/
+.vscode/
+.idea/
+.codex/
+.agents/
+.env
+.env.*
+*.user
+*.suo
+*.log
+*.bak
+*.mdf
+*.ldf
+*.pfx
+*.pem
+**/appsettings.Local.json
+
+# Entregables académicos, pruebas y respaldos locales
+docs/
+entregables/
+PLAN-DEL-PROYECTO.md
+Thumbs.db
+.DS_Store

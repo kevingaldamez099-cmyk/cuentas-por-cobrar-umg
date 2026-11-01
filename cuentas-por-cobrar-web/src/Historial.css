@@ -1,0 +1,6 @@
+.herramientas-historial { display: flex; flex-wrap: wrap; gap: 12px; }
+.historial-completo .reporte-cuenta td { overflow-wrap: anywhere; }
+@media print {
+  .historial-completo .reporte-cuenta table { table-layout: fixed; font-size: 9px; }
+  .historial-completo .reporte-cuenta th { white-space: normal; }
+}
